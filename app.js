@@ -17,6 +17,10 @@ app.set('view engine', 'jade');
 var mock = require('./routes/mock')
 app.use('/mocks',mock)
 
+
+var token = require('./routes/token')
+app.use('/token', token)
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
