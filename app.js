@@ -21,6 +21,9 @@ app.use('/mocks',mock)
 var token = require('./routes/token')
 app.use('/token', token)
 
+var wechat = require('./routes/wechat')
+app.use('/wechat', wechat)
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
